@@ -1,0 +1,62 @@
+/* NutriPlan Custom Styles and Enhancements */
+
+/* Loading overlay transitions */
+#app-loading-overlay {
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Custom Scrollbar for horizontally scrollable filter bars */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Card hover and smooth transition effects */
+.category-card, .recipe-card, .product-card {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-card:hover {
+  transform: translateY(-2px);
+}
+
+.recipe-card:hover, .product-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Active sidebar nav item indicator */
+.nav-link.active {
+  background-color: rgb(236 253 245);
+  color: rgb(4 120 87);
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  #sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  #sidebar.open {
+    transform: translateX(0);
+  }
+
+  #sidebar-overlay.active {
+    display: block;
+    opacity: 1;
+  }
+}
